@@ -106,10 +106,13 @@ public class PinyinTokenizer extends Tokenizer {
                 char[] buffer = termAtt.buffer();
                 while (true) {
                     final int length = input.read(buffer, upto, buffer.length - upto);
-                    if (length == -1) break;
+                    if (length == -1) {
+                        break;
+                    }
                     upto += length;
-                    if (upto == buffer.length)
+                    if (upto == buffer.length) {
                         buffer = termAtt.resizeBuffer(1 + buffer.length);
+                    }
                 }
                 termAtt.setLength(upto);
                 source = termAtt.toString();
@@ -184,8 +187,8 @@ public class PinyinTokenizer extends Tokenizer {
             if (config.keepFirstLetter && firstLetters.length() > 0 && !processedFirstLetter) {
                 processedFirstLetter = true;
                 String fl;
-                if (firstLetters.length() > config.LimitFirstLetterLength && config.LimitFirstLetterLength > 0) {
-                    fl = firstLetters.substring(0, config.LimitFirstLetterLength);
+                if (firstLetters.length() > config.limitFirstLetterLength && config.limitFirstLetterLength > 0) {
+                    fl = firstLetters.substring(0, config.limitFirstLetterLength);
                 } else {
                     fl = firstLetters.toString();
                 }

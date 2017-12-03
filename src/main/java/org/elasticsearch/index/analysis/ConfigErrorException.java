@@ -9,6 +9,7 @@ public class ConfigErrorException extends RuntimeException {
     public ConfigErrorException(String message) {
         this.mesage=message;
     }
+    @Override
     public String getMessage() {
         return this.mesage;
     }

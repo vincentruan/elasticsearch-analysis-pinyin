@@ -60,7 +60,9 @@ public class PinyinTokenFilter extends TokenFilter {
 
 
         if (!done) {
-            if (readTerm()) return true;
+            if (readTerm()) {
+                return true;
+            }
         }
 
         if (done) {
@@ -168,8 +170,8 @@ public class PinyinTokenFilter extends TokenFilter {
         if (config.keepFirstLetter && firstLetters.length() > 0 && !processedFirstLetter) {
             processedFirstLetter = true;
             String fl;
-            if (firstLetters.length() > config.LimitFirstLetterLength && config.LimitFirstLetterLength > 0) {
-                fl = firstLetters.substring(0, config.LimitFirstLetterLength);
+            if (firstLetters.length() > config.limitFirstLetterLength && config.limitFirstLetterLength > 0) {
+                fl = firstLetters.substring(0, config.limitFirstLetterLength);
             } else {
                 fl = firstLetters.toString();
             }

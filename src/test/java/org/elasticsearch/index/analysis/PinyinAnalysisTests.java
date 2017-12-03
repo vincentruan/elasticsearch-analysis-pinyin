@@ -166,7 +166,7 @@ public class PinyinAnalysisTests {
         config.keepNoneChineseInFirstLetter = true;
         config.keepOriginal = false;
         config.keepFullPinyin = false;
-        config.LimitFirstLetterLength = 5;
+        config.limitFirstLetterLength = 5;
         config.lowercase = true;
 
         sr = new StringReader("Go的数组是纯粹的值类型，传递一个[N]T的代价是N个T");
@@ -192,7 +192,7 @@ public class PinyinAnalysisTests {
         config.keepNoneChineseInFirstLetter = false;
         config.keepOriginal = false;
         config.keepFullPinyin = true;
-        config.LimitFirstLetterLength = 5;
+        config.limitFirstLetterLength = 5;
         config.lowercase = true;
 
         sr = new StringReader("liu德hua 名字");
@@ -227,7 +227,7 @@ public class PinyinAnalysisTests {
         config.keepNoneChineseInFirstLetter = false;
         config.keepOriginal = false;
         config.keepFullPinyin = true;
-        config.LimitFirstLetterLength = 5;
+        config.limitFirstLetterLength = 5;
         config.lowercase = true;
         config.noneChinesePinyinTokenize=true;
 
@@ -384,7 +384,7 @@ public class PinyinAnalysisTests {
         config.keepNoneChineseInFirstLetter = false;
         config.keepOriginal = false;
         config.keepFullPinyin = true;
-        config.LimitFirstLetterLength = 5;
+        config.limitFirstLetterLength = 5;
         config.lowercase = false;
 
         result = getStringArrayListHashMap(s1, config);
@@ -407,7 +407,7 @@ public class PinyinAnalysisTests {
         config.keepNoneChineseInFirstLetter = false;
         config.keepOriginal = false;
         config.keepFullPinyin = true;
-        config.LimitFirstLetterLength = 5;
+        config.limitFirstLetterLength = 5;
         config.removeDuplicateTerm = true;
         config.lowercase = false;
 
@@ -486,7 +486,7 @@ public class PinyinAnalysisTests {
         config.keepNoneChinese=true;
         config.keepNoneChineseTogether=true;
         config.keepOriginal=true;
-        config.LimitFirstLetterLength=16;
+        config.limitFirstLetterLength =16;
         config.noneChinesePinyinTokenize=true;
         config.lowercase=true;
 
